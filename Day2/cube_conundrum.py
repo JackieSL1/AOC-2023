@@ -1,4 +1,4 @@
-# Advent of Code 2023: Problem 2
+# Advent of Code 2023: Problem 2, Part 1
 
 colours = {
     'red': 12,
@@ -17,7 +17,6 @@ with open("test.txt") as f:
         for pair in line[line.find(":") + 1:].strip().replace(";",",").split(","):
             count, colour = pair.strip().split(" ")
             if int(count) > colours[colour]:
-                print(f"Invalid game: {game_number}")
                 valid = False
                 break
 
