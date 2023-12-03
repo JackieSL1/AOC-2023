@@ -1,5 +1,11 @@
 CC=gcc
 CFLAGS=-g -Wall
+FILES=trebuchet_1 trebuchet_2
 
-all: main.c
-	$(CC) $(CFLAGS) main.c -o main
+all: $(FILES)
+
+%: %.c
+	$(CC) $(CFLAGS) $< -o  $@
+clean:
+	rm $(FILES)
+
